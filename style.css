@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-size: 22px;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-color: #1f2235;
+}
+header, footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+    margin: 0 auto;
+    height: 10vh;
+    font-weight: 600;
+}
+nav,ul {
+    display: flex;
+    padding: 0 10px;
+    border-radius: 12px;
+}
+/*Formatação das DIVs*/
+.about {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    background-color: #24263b;
+}
+.a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 40vw;
+}
+.image {
+    width: 40vw;
+}
+.knowledge {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 80vw;
+    height: 40vh;
+    margin: 0 auto;
+}
+.b{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+}
+.c {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/**/
+button {
+    width: 150px;
+    height: 55px;
+    border-radius: 50px;
+    border: 2px solid #ff4a57;
+    background-color: transparent;
+    font-weight: 600;
+}
+h1 {
+    font-weight: bold;
+    font-size: 62px;
+}
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #ff4a57;
+    border-radius: 50px;
+}
+button:hover,
+a:hover,
+.card:hover {
+    background-color: #ff4a57;
+    cursor: pointer;
+}
+nav ul:hover {
+    color:#ff4a57;
+    cursor: pointer;
+}
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ff4a57;
+    border-radius: 8px;
+    background-color: #24263b;
+    padding: 80px;
+}
