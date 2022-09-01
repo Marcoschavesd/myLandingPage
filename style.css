@@ -10,6 +10,7 @@
     font-size: 22px;
     box-sizing: border-box;
 }
+/*Formatação*/
 body {
     display: flex;
     flex-direction: column;
@@ -22,19 +23,13 @@ header, footer {
     align-items: center;
     width: 80vw;
     margin: 0 auto;
-    height: 10vh;
+    height: 8rem;
     font-weight: 600;
-}
-nav,ul {
-    display: flex;
-    padding: 0 10px;
-    border-radius: 12px;
 }
 /*Formatação das DIVs*/
 .about {
     display: flex;
     justify-content: center;
-    height: 80vh;
     background-color: #24263b;
 }
 .a {
@@ -51,8 +46,8 @@ nav,ul {
     justify-content: space-around;
     flex-direction: column;
     width: 80vw;
-    height: 40vh;
     margin: 0 auto;
+    padding: 25px;
 }
 .b{
     display: flex;
@@ -65,7 +60,38 @@ nav,ul {
     justify-content: space-between;
     align-items: center;
 }
-/**/
+.contate{
+    display: flex;
+    justify-content: center;
+    height: 600px;
+    background-color: #24263b;
+    padding: 25px;
+}
+.form-image{
+    display: flex;
+    justify-content: flex-end;
+    width: 40%;
+}
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 40%;
+    margin: 0 auto;
+}
+form {
+    width: 680px;
+    border: 1px solid #ff4a57;
+}
+label {
+    display: block;
+}
+input {
+    padding: 10px;
+    height: 35px;
+    border-radius: 8px;
+}
+/*Botão*/
 button {
     width: 150px;
     height: 55px;
@@ -74,11 +100,7 @@ button {
     background-color: transparent;
     font-weight: 600;
 }
-h1 {
-    font-weight: bold;
-    font-size: 62px;
-}
-a {
+.aStyle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,15 +109,15 @@ a {
     border: 2px solid #ff4a57;
     border-radius: 50px;
 }
-button:hover,
-a:hover,
-.card:hover {
-    background-color: #ff4a57;
-    cursor: pointer;
+/*FIM botão*/
+h1 {
+    font-weight: bold;
+    font-size: 62px;
 }
-nav ul:hover {
-    color:#ff4a57;
-    cursor: pointer;
+nav,ul {
+    display: flex;
+    gap: 12px;
+    border-radius: 12px;
 }
 .card {
     display: flex;
@@ -107,4 +129,16 @@ nav ul:hover {
     border-radius: 8px;
     background-color: #24263b;
     padding: 80px;
+}
+/*Efeitos Hover*/
+button:hover,
+.aStyle:hover,
+.card:hover {
+    background-color: #ff4a57;
+    cursor: pointer;
+}
+nav ul:hover,
+a:hover {
+    color:#ff4a57;
+    cursor: pointer;
 }
