@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcos Chaves Duarte</title>
+    <title>Minha Pagina</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/e7141edab5.js" crossorigin="anonymous"></script>
 </head>
@@ -16,14 +16,16 @@
                 <a href="#sobre">Sobre</a>
                 <a href="#conhecimento">Conhecimento</a>
                 <a href="#contato">Contate-me</a>
-                <ul>Certificados
-                    <li>teste</li>
-                    <li>teste</li>
+                <ul class="dropmenu" >Certificados
+                    <div class="menu-content" >
+                        <a href="https://www.linkedin.com/learning/certificates/80cf587562f0e16bcf4287b3bdfe3356653a5900cb99ed984345bf311644644b?trk=share_certificate&li_theme=dark">CSS</a>
+                        <a href="https://www.linkedin.com/learning/certificates/54da6496f4efd6e2c6495f7ac5d4839851c38cdce1dd4a4114f5625c78f3fc2b?li_theme=dark">HTML</a>
+                    </div>
                 </ul>
             </nav>
         </header>
         <div class="about" id="sobre">
-            <div class="a">
+            <div class="about-text">
                 <ul>
                     <a class="aStyle" href="https://www.linkedin.com/in/marcos-chaves-duarte-47098067/">
                     <i class="fa-brands fa-linkedin-in"></i></a>
@@ -36,20 +38,56 @@
                 <p>Eu sou Marcos, analista de suporte com vasta experiência e estou estudando programação com foco no Front-end.</p>
                 <button>Projetos</button>
             </div>
-            <div class="image">
+            <div class="about-image">
                 <img src="./perfil.png" alt="Perfil">
             </div>
         </div>
         <div class="knowledge" id="conhecimento">
             <div class="b">
-                <h1>Conhecimento</h1>
-                <h2>Linguagens e outros</h2>
+                <h2>Conhecimento</h2>
+                <h3>Linguagens e outros</h3>
             </div>
             <div class="c">
-                <span class="card">HTML</span>
-                <span class="card">CSS</span>
-                <span class="card">JavaScript</span>
-                <span class="card">SQL</span>
+                <div class="flip-container">
+                    <div class="flipper">
+                        <div class="front">
+                            <span class="card">HTML</span>
+                        </div>
+                        <div class="back">
+                            <span class="card">Teste</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-container">
+                    <div class="flipper">
+                        <div class="front">
+                            <span class="card">CSS</span>
+                        </div>
+                        <div class="back">
+                            <span class="card">Teste</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-container">
+                    <div class="flipper">
+                        <div class="front">
+                            <span class="card">JavaScript</span>
+                        </div>
+                        <div class="back">
+                            <span class="card">Teste</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-container">
+                    <div class="flipper">
+                        <div class="front">
+                            <span class="card">SQL</span>
+                        </div>
+                        <div class="back">
+                            <span class="card">Teste</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="contate" id="contato">
@@ -57,7 +95,8 @@
                 <img src="./perfil.png" alt="">
             </div>
             <div class="form">
-                <form action="post">
+                <h2>Contate-me</h2>
+                <form action="post" method="post">
                     <label>Nome</label>
                     <input type="text" id="name"  placeholder="Digite seu nome">
                     <label>Email</label>
@@ -67,8 +106,8 @@
                     <label>Assunto</label>
                     <input type="text" id="assunto" placeholder="Assunto">
                     <label>Mensagem</label>
-                    <textarea id="mensagem" cols="20" rows="8"></textarea>
-                    <button type="submit">Enviar</button>
+                    <textarea id="mensagem" ></textarea>
+                    <button class="aStyle" type="submit"><i class="fa-regular fa-paper-plane"></i></button>
                 </form>
             </div>
         </div>
