@@ -17,7 +17,7 @@ body {
     width: 100vw;
     background-color: #1f2235;
 }
-header, footer {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,23 +26,51 @@ header, footer {
     height: 7rem;
     font-weight: 600;
 }
-/*Formatação das DIVs*/
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
+    margin: 0 auto;
+    height: 7rem;
+    font-weight: 600;
+}
+/******************/
 .about {
     display: flex;
     justify-content: center;
     background-color: #24263b;
+    height: 70vh;
 }
 .about-text {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 40vw;
+}
+.about-text-a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 70%;
+}
+.about-text-b {
+    display: flex;
+    align-items: center;
+    height: 30%;
+    gap: 35px;
 }
 .about-image {
     display: flex;
     justify-content: center;
     width: 40vw;
 }
+.about-image img {
+    width: auto;
+    height: auto;
+}
+/******************/
 .knowledge {
     display: flex;
     justify-content: space-around;
@@ -63,17 +91,58 @@ header, footer {
     align-items: center;
     margin-top: 25px;
 }
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ff4a57;
+    border-radius: 12px;
+    background-color: #24263b;
+    padding: 80px;
+}
+/*Efeito Flip*/
+.flip-container {
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+}
+.flipper{
+	width: 100%;
+	height: 100%;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+    position: relative;
+}
+.flip-container:hover .flipper{
+	transform: rotateY(180deg);
+}
+.front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.back {
+    transform: rotateY(180deg);
+}
+/******************/
 .contate{
     display: flex;
     justify-content: center;
     height: 600px;
     background-color: #24263b;
-    padding: 25px;
 }
 .form-image{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     width: 40%;
+}
+.form-image img {
+    width: auto;
+    height: auto;
+    align-items: flex-end;
 }
 .form{
     display: flex;
@@ -119,6 +188,16 @@ button {
     border: 2px solid #ff4a57;
     border-radius: 50px;
 }
+.aStyle-b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #ff4a57;
+    background-color:#ff4a57;
+    border-radius: 50px;
+}
 /*Navegação e outros*/
 h1, h2 {
     font-weight: bold;
@@ -128,17 +207,6 @@ nav,ul {
     display: flex;
     gap: 35px;
     border-radius: 12px;
-}
-.card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    border: 2px solid #ff4a57;
-    border-radius: 12px;
-    background-color: #24263b;
-    padding: 80px;
 }
 .dropmenu {
     display: block;
@@ -168,41 +236,7 @@ a:hover,
     color:#ff4a57;
     cursor: pointer;
 }
-
-/*Teste Flip*/
-
-.flip-container {
-    width: 200px;
-    height: 200px;
-    perspective: 1000px;
-}
-.flipper{
-	width: 100%;
-	height: 100%;
-	transition: transform 0.8s;
-	transform-style: preserve-3d;
-    position: relative;
-}
-.flip-container:hover .flipper{
-	transform: rotateY(180deg);
-}
-.front, .back{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-}
-.back {
-    transform: rotateY(180deg);
-}
-
-@media screen and (max-width: 1024px) {
-    .about-image {
-        display: none;
-    }
-    .about-text {
-        display: flex;
-        width: 100vw;
-    }
-    
+.aStyle-b:hover {
+    background-color: transparent;
+    cursor: pointer;
 }
