@@ -19,10 +19,9 @@ body {
 }
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 80vw;
-    margin: 0 auto;
+    /*width: 80vw;
+    margin: 0 auto;*/
     height: 7rem;
     font-weight: 600;
 }
@@ -37,10 +36,17 @@ footer {
     font-weight: 600;
 }
 /******************/
+.nav-desk {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    margin: 0 auto;
+}
 .about {
     display: flex;
     justify-content: center;
     background-color: #24263b;
+    width: 100vw;
     height: 70vh;
 }
 .about-text {
@@ -203,7 +209,8 @@ h1, h2 {
     font-weight: bold;
     font-size: 62px;
 }
-nav,ul {
+.nav-desk-items,
+ul {
     display: flex;
     gap: 35px;
     border-radius: 12px;
@@ -239,4 +246,7 @@ a:hover,
 .aStyle-b:hover {
     background-color: transparent;
     cursor: pointer;
+}
+.nav-mobile {
+    display: none;
 }
