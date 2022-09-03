@@ -9,77 +9,68 @@
     }
     header {
         display: flex;
+        justify-content: space-between;
         align-items: center;
+        width: 100vw;
         height: 5rem;
-        font-weight: 600;
+        margin: 0;
     }
     footer {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        width: 80vw;
         height: 7rem;
-    }
-    .about-image, nav {
-        display: none;
+        margin: 0 auto;
     }
     /*Formatação das DIVs*/
     .about {
         display: flex;
+        width: 100vw;
         background-color: #24263b;
     }
     .about-text {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        width: 80vw;
-        height: 60vh;
+        width: 90vw;
+        height: 70vh;
     }
-    .contate{
+    .about-text-a {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-evenly;
+        height: 70h;
+    }
+    .about-text-b {
+        display: flex;
         align-items: center;
-        background-color: #24263b;
-        box-sizing: border-box;
-        width: 100vw;
-        height: 100vh;
+        height: 30%;
+        gap: 35px;
     }
-    .form-image {
-        display: flex;
-        justify-content: center;
-    }
-    .form-image img{
-        width: 26rem;
-    }
-    .form{
-        display: flex;
-        justify-self: center;
-        width: 80vw;
-    }
-    form {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    h1, h2 {
-        font-weight: bold;
-        font-size: 32px;
+    .about-image, .nav-desk {
+        display: none;
     }
     .knowledge {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         flex-direction: column;
         width: 90vw;
-        height: 45vh;
-        margin: 0 auto;
+    }
+    .b{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80vw;
     }
     .c {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
         margin-top: 25px;
+        height: 35vh;
         gap: 2px;
     }
     .card {
@@ -118,5 +109,81 @@
     }
     .back {
         transform: rotateY(180deg);
+    }
+    .contate{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #24263b;
+        box-sizing: border-box;
+        width: 100vw;
+        height: 100vh;
+    }
+    .form-image {
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+    }
+    .form-image img{
+        width: 26rem;
+    }
+    .form{
+        display: flex;
+        justify-self: center;
+        width: 80vw;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    h1, h2 {
+        font-weight: bold;
+        font-size: 32px;
+    }
+    .nav-mobile {
+        display: flex;
+    }
+    .dropmenu {
+        display: block;
+    }
+    .sub-dropmenu {
+        display: block;
+    }
+    .menu-content {
+        display: none;
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        border: 1px solid #ff4a5788;
+        border-radius: 0 8px 8px 0;
+        background-color: #ff4a5799;
+        backdrop-filter: blur(1px);
+        padding: 10px;
+        gap: 10px;
+        text-transform: uppercase;
+    }
+    .sub-menu-content {
+        display: none;
+        position: absolute;
+        padding: 15px;
+        gap: 10px;
+    }
+    .menu-content a,ul {
+        font-size: 18px;
+    }
+    .sub-menu-content ul a{
+        display: none;
+        position: absolute;
+        padding: 10px;
+    }
+    .dropmenu:hover .menu-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .sub-dropmenu:hover .sub-menu-content{
+        display: flex;
+        flex-direction: column;
+        position: static;
     }
 }
