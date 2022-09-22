@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -13,17 +12,24 @@
 }
 /*Formatação*/
 body {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
     background-color: #1f2235;
+}
+.container {
+    width: 100vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "header"
+        "about"
+        "knowledge"
+        "contate"
+        "footer";
 }
 header {
     display: flex;
     align-items: center;
-    /*width: 80vw;
-    margin: 0 auto;*/
-    height: 7rem;
+    grid-area: header;
+    height: 15vh;
     font-weight: 600;
 }
 footer {
@@ -31,9 +37,8 @@ footer {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 80vw;
-    margin: 0 auto;
-    height: 7rem;
+    grid-area: footer;
+    height: 15vh;
     font-weight: 600;
 }
 /******************/
@@ -47,67 +52,55 @@ footer {
     display: flex;
     justify-content: center;
     background-color: #24263b;
-    width: 100vw;
-    height: 70vh;
+    gap: 12px;
+    grid-area: about;
 }
 .about-text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     width: 40vw;
+    height: 70vh;
 }
-.about-text-a {
+.about-presentation {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 70%;
+    justify-content: space-around;
+    min-height: 40vh;
 }
-.about-text-b {
+.about-projects {
     display: flex;
     align-items: center;
-    height: 30%;
     gap: 35px;
 }
 .about-image {
     display: flex;
     justify-content: center;
-    width: 40vw;
+    max-width: 40vw;
+    height: 70vh;
+    box-sizing: border-box;
 }
-.about-image img {
-    width: auto;
-    height: auto;
-}
-/******************/
+/*********Knowledge*********/
 .knowledge {
     display: flex;
-    justify-content: space-around;
+    width: 100vw;
     flex-direction: column;
-    width: 80vw;
-    margin: 0 auto;
-    padding: 25px;
+    grid-area: knowledge;
 }
-.b{
+.knowledge-title {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 80vw;
-}
-.c {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 25px;
-}
-.card {
-    display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    border: 2px solid #ff4a57;
-    border-radius: 12px;
-    background-color: #24263b;
-    padding: 80px;
+    margin-bottom: 12px;
+}
+.know-card {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    min-height: 35vh;
 }
 /*Efeito Flip*/
 .flip-container {
@@ -134,32 +127,44 @@ footer {
 .back {
     transform: rotateY(180deg);
 }
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ff4a57;
+    border-radius: 12px;
+    background-color: #24263b;
+    padding: 80px;
+}
 /******************/
 .contate{
     display: flex;
     justify-content: center;
-    height: 600px;
+    grid-area: contate;
     background-color: #24263b;
 }
 .form-image{
     display: flex;
     justify-content: center;
-    width: 40%;
+    max-width: 30vw;
 }
 .form-image img {
     width: auto;
     height: auto;
     align-items: flex-end;
+    padding: 35px;
 }
 .form{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    width: 40%;
-    margin: 0 auto;
-}
-form {
-    width: 680px;
+    gap: 30px;
+    min-width: 50vw;
+    border-radius: 12px;
 }
 label {
     display: block;
