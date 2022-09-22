@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Pagina</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styleMobile.css">
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="./src/styleMobile.css">
     <script src="https://kit.fontawesome.com/e7141edab5.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <main>
+    <main class="container">
         <header>
             <div class="nav-mobile">
                 <ul class="dropmenu"><i class="fa-solid fa-bars"></i>
@@ -44,7 +44,7 @@
         </header>
         <div class="about" id="sobre">
             <div class="about-text">
-                <div class="about-text-a" >
+                <div class="about-presentation">
                     <ul>
                         <a class="aStyle" href="https://www.linkedin.com/in/marcos-chaves-duarte-47098067/">
                         <i class="fa-brands fa-linkedin-in"></i></a>
@@ -54,30 +54,30 @@
                         <a class="aStyle" href="#"><i class="fa-brands fa-instagram"></i></a>
                     </ul>
                     <h1>Marcos Chaves Duarte</h1>
-                    <p>Eu sou Marcos, analista de suporte com vasta experiência e estou estudando programação com foco no Front-end.</p>
+                    <p>Eu sou Marcos, analista de suporte com anos de experiência. No momento estou estudando programação com foco no Front-end, fique a vontade em ver meu portlofio e meus projetos no github.</p>
                 </div>
-                <div class="about-text-b" >
+                <div class="about-projects" >
                     <button>Projetos</button>
                     <a class="aStyle-b" href="https://wa.me/5567991039674?text=Ola%20gostaria%20de%20falar%20contigo"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
             <div class="about-image">
-                <img src="./perfil.png" alt="Perfil">
+                <img src="./src/img/perfil.png" alt="Perfil">
             </div>
         </div>
         <div class="knowledge" id="conhecimento">
-            <div class="b">
+            <div class="knowledge-title">
                 <h2>Conhecimento</h2>
                 <h3>Linguagens e outros</h3>
             </div>
-            <div class="c">
+            <div class="know-card">
                 <div class="flip-container">
                     <div class="flipper">
                         <div class="front">
                             <span class="card">HTML</span>
                         </div>
                         <div class="back">
-                            <span class="card">Manipulação de formulários, tela de login entre outros.</span>
+                            <span class="card">Teste</span>
                         </div>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
                             <span class="card">CSS</span>
                         </div>
                         <div class="back">
-                            <span class="card">Responsividade, Flexbox e Grid</span>
+                            <span class="card">Teste</span>
                         </div>
                     </div>
                 </div>
@@ -97,7 +97,7 @@
                             <span class="card">JavaScript</span>
                         </div>
                         <div class="back">
-                            <span class="card">Manipulação do DOM e APIs</span>
+                            <span class="card">Teste</span>
                         </div>
                     </div>
                 </div>
@@ -107,7 +107,7 @@
                             <span class="card">SQL</span>
                         </div>
                         <div class="back">
-                            <span class="card">Em desenvolvimento</span>
+                            <span class="card">Teste</span>
                         </div>
                     </div>
                 </div>
@@ -115,11 +115,11 @@
         </div>
         <div class="contate" id="contato">
             <div class="form-image">
-                <img src="./form.image.png" alt="">
+                <img src="./src/img/form.svg" alt="Ilustração">
             </div>
             <div class="form">
                 <h2>Contate-me</h2>
-                <form action="post" method="post" autocomplete="off">
+                <form method="post" autocomplete="off">
                     <label>Nome</label>
                     <input type="text" id="name"  placeholder="Digite seu nome">
                     <label>Email</label>
@@ -129,7 +129,7 @@
                     <label>Assunto</label>
                     <input type="text" id="assunto" placeholder="Assunto">
                     <label>Mensagem</label>
-                    <textarea id="mensagem" ></textarea>
+                    <textarea id="mensagem"></textarea>
                     <button class="aStyle" type="submit"><i class="fa-regular fa-paper-plane"></i></button>
                 </form>
             </div>
