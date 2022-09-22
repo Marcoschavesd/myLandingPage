@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap');
 
 @media screen and (max-width: 600px) {
     body {
@@ -6,13 +6,13 @@
         flex-direction: column;
         width: 100vw;
         background-color: #1f2235;
+        box-sizing: border-box;
     }
     header {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        align-items:flex-start;
         width: 100vw;
-        height: 13vh;
+        height: 3rem;
         margin: 0;
     }
     footer {
@@ -20,13 +20,12 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        width: 100vw;
-        height: 15vh;
-        margin: auto;
+        height: 7rem;
     }
     /*Formatação das DIVs*/
     .about {
         display: flex;
+        justify-content: center;
         width: 100vw;
         background-color: #24263b;
     }
@@ -34,16 +33,16 @@
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        width: 90vw;
+        width: 95vw;
         height: 70vh;
     }
-    .about-text-a {
+    .about-presentation {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        height: 70%;
+        height: 70h;
     }
-    .about-text-b {
+    .about-projects {
         display: flex;
         align-items: center;
         height: 30%;
@@ -52,66 +51,27 @@
     .about-image, .nav-desk {
         display: none;
     }
-    .knowledge {
+    .know-card {
         display: flex;
-        justify-content: center;
-        flex-direction: column;
-        width: 100vw;
-        height: 50vh;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        padding: 12px;
     }
-    .b{
-        display: flex;
-        align-items: center;
-        width: 80vw;
-        height: 20%;
-        margin: 0 auto;
-    }
-    .c {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        height: 80%;
-        margin-top: 25px;
-        gap: 2px;
-    }
-    .card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        border: 2px solid #ff4a57;
-        border-radius: 12px;
-        background-color: #24263b;
-        padding: 60px;
-        font-size: 16px;
-    }
-    /*Efeito Flip*/
     .flip-container {
-        width: 100px;
-        height: 100px;
-        perspective: 1000px;
+        flex: 0 0 50%;
+        scroll-snap-align: start;
     }
-    .flipper{
-        width: 100%;
-        height: 100%;
-        transition: transform 0.8s;
-        transform-style: preserve-3d;
-        position: relative;
+    .know-card::-webkit-scrollbar {
+        height: 12px;
+      }
+    .know-card::-webkit-scrollbar-track {
+        background-color: rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
     }
-    .flip-container:hover .flipper{
-        transform: rotateY(180deg);
-    }
-    .front, .back{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-        z-index: -1;
-    }
-    .back {
-        transform: rotateY(180deg);
+    .know-card::-webkit-scrollbar-thumb {
+        background-color:  #ff4a57;
+        border-radius: 4px;
     }
     .contate{
         display: flex;
@@ -120,38 +80,16 @@
         align-items: center;
         background-color: #24263b;
         box-sizing: border-box;
-        width: 100vw;
-        height: 100vh;
-    }
-    .form-image {
-        display: flex;
-        justify-content: center;
+        padding-bottom: 25px;
     }
     .form-image img{
-        width: 340px;
-        height: auto;
-    }
-    .form{
-        display: flex;
-        justify-self: center;
-        width: 60vw;
-    }
-    form {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        width: 16rem;
     }
     h1, h2 {
         font-weight: bold;
         font-size: 32px;
     }
-    .nav-mobile {
-        display: flex;
-    }
-    .dropmenu {
-        display: block;
-    }
-    .sub-dropmenu {
+    .nav-mobile, .dropmenu, .sub-dropmenu {
         display: block;
     }
     .menu-content {
@@ -190,4 +128,8 @@
         flex-direction: column;
         position: static;
     }
+}
+.form{
+    max-width: 100vw;
+    border-radius: 12px;
 }
